@@ -10,9 +10,11 @@ Dicionário de dados utilizado no sistema **E-School**.
 
 2. [**Modelo Proposto**](2-modelo-proposto)
    
-3. [**E-school**](3-e-school)
+3. [**E-school**](3-e-school)   
    
-   3.1. [Período](3-1-periodo)
+    3.1. [Período](31---período)
+    
+    3.2. [Semestre](32---semestre)
 ## 1. Introdução
 
 O Dicionário de Dados é uma listagem organizada de todos os elementos de dados que são pertinentes ao sistema, com definições precisas e rigorosas.  
@@ -35,7 +37,7 @@ Segue abaixo, o modelo proposto para criação do dicionário de dados: <br /> *
     <th>Tamanho</th>
     <th>PK</th>
     <th>FK</th>
-    <th>Not Null</th>
+    <th>Null</th>
   </tr>
   <tr>
     <td>Nome do Campo da entidade.</td>
@@ -68,24 +70,63 @@ Segue abaixo, o modelo proposto para criação do dicionário de dados: <br /> *
     <th>Tamanho</th>
     <th>PK</th>
     <th>FK</th>
-    <th>Not Null</th>
+    <th>Null</th>
   </tr>
   <tr>
     <td>codigo</td>
     <td>Código que definirá o período</td>
     <td>varchar</td>
     <td>20</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>x</td>
+    <td>-</td>
+    <td>-</td>
   </tr>
   <tr>
     <td>descricao</td>
     <td>Descrição do código que definirá o período</td>
     <td>varchar</td>
     <td>100</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table> 
+
+### 3.2 - Semestre
+
+  Entidade responsável por armazenar os dados do semestre da turma.
+
+  <table>
+ <tr align="left">
+    <th colspan="7">
+      Entidade: <span style="font-weight: normal">semestre</span>
+    </th>
+  </tr>
+  <tr>
+    <th>Atributo</th>
+    <th>Descrição</th>
+    <th>Tipo dados</th>
+    <th>Tamanho</th>
+    <th>PK</th>
+    <th>FK</th>
+    <th>Null</th>
+  </tr>
+  <tr>
+    <td>codigo</td>
+    <td>Código que definirá o semestre</td>
+    <td>varchar</td>
+    <td>20</td>
+    <td>x</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>descricao</td>
+    <td>Descrição do código que definirá o semestre</td>
+    <td>varchar</td>
+    <td>100</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
   </tr>
 </table> 
