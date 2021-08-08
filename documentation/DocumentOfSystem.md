@@ -1,6 +1,4 @@
-<h1 align="center">
- 📖 Dicionário de dados
-</h1>
+# 📖 Dicionário de dados
 
 Dicionário de dados utilizado no sistema **E-School**.
 
@@ -8,13 +6,13 @@ Dicionário de dados utilizado no sistema **E-School**.
 
 1. [**Introdução**](#1-introducao)
 
-2. [**Modelo Proposto**](2-modelo-proposto)
+2. [**Modelo Proposto**](#2-modelo-proposto)
    
-3. [**E-school**](3-e-school)   
+3. [**E-school**](#3-e-school)   
    
-    3.1. [Período](31---período)
+    3.1. [Período](#31---período)
     
-    3.2. [Semestre](32---semestre)
+    3.2. [Semestre](#32---semestre)
 ## 1. Introdução
 
 O Dicionário de Dados é uma listagem organizada de todos os elementos de dados que são pertinentes ao sistema, com definições precisas e rigorosas.  
