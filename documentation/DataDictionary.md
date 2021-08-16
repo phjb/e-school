@@ -17,9 +17,11 @@ Dicionário de dados utilizado no sistema **E-School**.
 
    3.4. [Curso](#34---curso)
 
-   3.5. [Relação entre Curso e Turma](#35---relacao-entre-curso-e-turma)
+   3.5. [Relação entre Curso e Turma](#35---relação-entre-curso-e-turma)
    
-   3.6. [Curso](#36---disciplina)
+   3.6. [Disciplina](#36---disciplina)
+
+   3.7. [Relação entre Disciplina e Curso](#37---relação-entre-disciplina-e-curso)
 
 ## 1. Introdução
 
