@@ -23,6 +23,16 @@ Dicionário de dados utilizado no sistema **E-School**.
 
    3.7. [Relação entre Disciplina e Curso](#37---relação-entre-disciplina-e-curso)
 
+   3.8. [Função](#38---função)
+
+   3.9. [Funcionário](#39---funcionário)
+
+   3.10. [Relação entre Funcionário e Função](#310---relação-entre-funcionário-e-função)
+
+   3.11. [Relação entre Funcionário e Disciplina](#311---relação-entre-funcionário-e-disciplina)
+
+   3.12. [Relação entre Funcionário e Curso](#312---relação-entre-funcionário-e-curso)
+
 ## 1. Introdução
 
 O Dicionário de Dados é uma listagem organizada de todos os elementos de dados que são pertinentes ao sistema, com definições precisas e rigorosas.  
@@ -228,19 +238,19 @@ Entidade responsável por armazenar os dados da turma.
     <td>-</td>
   </tr>
   <tr>
-    <td>id_semestre</td>
-    <td>Identificar da entidade semestre a qual a turma pertence</td>
+    <td>semestre</td>
+    <td>Identificador da entidade semestre a qual a turma pertence</td>
     <td>varchar</td>
-    <td>255</td>
+    <td>20</td>
     <td>-</td>
     <td>x</td>
     <td>-</td>
   </tr>
     <tr>
-    <td>id_periodo</td>
-    <td>Identificar da entidade período a qual a turma pertence</td>
+    <td>periodo</td>
+    <td>Identificador da entidade período a qual a turma pertence</td>
     <td>varchar</td>
-    <td>255</td>
+    <td>20</td>
     <td>-</td>
     <td>x</td>
     <td>-</td>
@@ -392,7 +402,7 @@ Entidade responsável por armazenar a relação entre curso e turma.
     <td>id_curso</td>
     <td>Identificador único da entidade curso</td>
     <td>varchar</td>
-    <td>255</td>
+    <td>40</td>
     <td>x</td>
     <td>x</td>
     <td>-</td>
@@ -401,7 +411,7 @@ Entidade responsável por armazenar a relação entre curso e turma.
     <td>id_turma</td>
     <td>Identificador único da entidade turma</td>
     <td>varchar</td>
-    <td>255</td>
+    <td>40</td>
     <td>x</td>
     <td>x</td>
     <td>-</td>
@@ -480,7 +490,7 @@ Entidade responsável por armazenar a relação entre disciplina e curso.
     <td>id_disciplina</td>
     <td>Identificador único da entidade disciplina</td>
     <td>varchar</td>
-    <td>255</td>
+    <td>40</td>
     <td>x</td>
     <td>x</td>
     <td>-</td>
@@ -489,9 +499,225 @@ Entidade responsável por armazenar a relação entre disciplina e curso.
     <td>id_curso</td>
     <td>Identificador único da entidade curso</td>
     <td>varchar</td>
-    <td>255</td>
+    <td>40</td>
     <td>x</td>
     <td>x</td>
     <td>-</td>
   </tr>
   </table>
+
+### 3.8 - Função
+
+Entidade responsável por armazenar os dados da função do funcionário.
+
+  <table>
+ <tr align="left">
+    <th colspan="7">
+      Entidade: <span style="font-weight: normal">funcao</span>
+    </th>
+  </tr>
+  <tr align="left">
+    <th>Atributo</th>
+    <th>Descrição</th>
+    <th>Tipo dados</th>
+    <th>Tamanho</th>
+    <th>PK</th>
+    <th>FK</th>
+    <th>Null</th>
+  </tr>
+  <tr>
+    <td>codigo</td>
+    <td>Código que definirá a função</td>
+    <td>varchar</td>
+    <td>20</td>
+    <td>x</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>descricao</td>
+    <td>Descrição do código que definirá a função</td>
+    <td>varchar</td>
+    <td>100</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
+
+### 3.9 - Funcionário
+
+Entidade responsável por armazenar os dados do funcionário.
+
+  <table>
+ <tr align="left">
+    <th colspan="7">
+      Entidade: <span style="font-weight: normal">funcionario</span>
+    </th>
+  </tr>
+  <tr align="left">
+    <th>Atributo</th>
+    <th>Descrição</th>
+    <th>Tipo dados</th>
+    <th>Tamanho</th>
+    <th>PK</th>
+    <th>FK</th>
+    <th>Null</th>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Identificador único da entidade</td>
+    <td>serial</td>
+    <td>-</td>
+    <td>x</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+    <tr>
+    <td>pessoa</td>
+    <td>Identificador único da entidade pessoa</td>
+    <td>varchar</td>
+    <td>40</td>
+    <td>-</td>
+    <td>x</td>
+    <td>-</td>
+  </tr>
+   <tr>
+    <td>funcao</td>
+    <td>Identificador único da entidade função</td>
+    <td>varchar</td>
+    <td>20</td>
+    <td>-</td>
+    <td>x</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>contrato</td>
+    <td>Código/Número do contrato do funcionário</td>
+    <td>varchar</td>
+    <td>20</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
+
+
+### 3.10 - Relação entre Funcionário e Função
+
+Entidade responsável por armazenar a relação entre funcionário e função.
+
+<table>
+ <tr align="left">
+    <th colspan="7">
+      Entidade: <span style="font-weight: normal">rel_funcionario_funcao</span>
+    </th>
+  </tr>
+  <tr align="left">
+    <th>Atributo</th>
+    <th>Descrição</th>
+    <th>Tipo dados</th>
+    <th>Tamanho</th>
+    <th>PK</th>
+    <th>FK</th>
+    <th>Null</th>
+  </tr>
+  <tr>
+    <td>funcionario</td>
+    <td>Identificador único da entidade funcionário</td>
+    <td>varchar</td>
+    <td>40</td>
+    <td>x</td>
+    <td>x</td>
+    <td>-</td>
+  </tr>
+    <tr>
+    <td>funcao</td>
+    <td>Identificador único da entidade função</td>
+    <td>varchar</td>
+    <td>20</td>
+    <td>x</td>
+    <td>x</td>
+    <td>-</td>
+  </tr>
+  </table>
+
+### 3.11 - Relação entre Funcionário e Disciplina
+
+Entidade responsável por armazenar a relação entre funcionário e disciplina.
+
+<table>
+ <tr align="left">
+    <th colspan="7">
+      Entidade: <span style="font-weight: normal">rel_funcionario_disciplina</span>
+    </th>
+  </tr>
+  <tr align="left">
+    <th>Atributo</th>
+    <th>Descrição</th>
+    <th>Tipo dados</th>
+    <th>Tamanho</th>
+    <th>PK</th>
+    <th>FK</th>
+    <th>Null</th>
+  </tr>
+  <tr>
+    <td>funcionario</td>
+    <td>Identificador único da entidade funcionário</td>
+    <td>varchar</td>
+    <td>40</td>
+    <td>x</td>
+    <td>x</td>
+    <td>-</td>
+  </tr>
+    <tr>
+    <td>disciplina</td>
+    <td>Identificador único da entidade disciplina</td>
+    <td>varchar</td>
+    <td>40</td>
+    <td>x</td>
+    <td>x</td>
+    <td>-</td>
+  </tr>
+  </table>
+
+### 3.12 - Relação entre Funcionário e Curso
+
+Entidade responsável por armazenar a relação entre funcionário e curso.
+
+<table>
+ <tr align="left">
+    <th colspan="7">
+      Entidade: <span style="font-weight: normal">rel_funcionario_curso</span>
+    </th>
+  </tr>
+  <tr align="left">
+    <th>Atributo</th>
+    <th>Descrição</th>
+    <th>Tipo dados</th>
+    <th>Tamanho</th>
+    <th>PK</th>
+    <th>FK</th>
+    <th>Null</th>
+  </tr>
+  <tr>
+    <td>funcionario</td>
+    <td>Identificador único da entidade funcionário</td>
+    <td>varchar</td>
+    <td>40</td>
+    <td>x</td>
+    <td>x</td>
+    <td>-</td>
+  </tr>
+    <tr>
+    <td>curso</td>
+    <td>Identificador único da entidade curso</td>
+    <td>varchar</td>
+    <td>40</td>
+    <td>x</td>
+    <td>x</td>
+    <td>-</td>
+  </tr>
+  </table>
+
+  
